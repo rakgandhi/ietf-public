@@ -79,7 +79,7 @@ Table of Contents
      1.1.  Summary of PCEP Extensions  . . . . . . . . . . . . . . .   4
    2.  Conventions Used in This Document . . . . . . . . . . . . . .   4
      2.1.  Key Word Definitions  . . . . . . . . . . . . . . . . . .   4
-     2.2.  Terminology . . . . . . . . . . . . . . . . . . . . . . .   4
+     2.2.  Terminology . . . . . . . . . . . . . . . . . . . . . . .   5
    3.  Overview  . . . . . . . . . . . . . . . . . . . . . . . . . .   5
      3.1.  Single-sided Initiation . . . . . . . . . . . . . . . . .   5
      3.2.  Double-sided Initiation . . . . . . . . . . . . . . . . .   6
@@ -157,10 +157,10 @@ Internet-Draft    PCEP for Associated Bidirectional LSP       March 2020
    MPLS-TE LSPs into an Associated Bidirectional LSP for both single-
    sided and double-sided initiation cases when using a Stateful PCE for
    both PCE-Initiated and PCC-Initiated LSPs as well as when using a
-   Stateless PCE.  The procedures defined are applicable to the LSPs
+   Stateless PCE.  The procedures defined are applicable to the TE LSPs
    using Resource Reservation Protocol (RSVP) for signaling [RFC3209].
-
-
+   The procedure for associating two unidirectional Segment Routing (SR)
+   Paths to form an Associated Bidirectional SR Path is defined in
 
 
 
@@ -169,6 +169,9 @@ Gandhi, et al.         Expires September 14, 2020               [Page 3]
 
 Internet-Draft    PCEP for Associated Bidirectional LSP       March 2020
 
+
+   [I-D.ietf-pce-sr-bidir-path], and is outside the scope of this
+   document.
 
 1.1.  Summary of PCEP Extensions
 
@@ -212,10 +215,7 @@ Internet-Draft    PCEP for Associated Bidirectional LSP       March 2020
    14 [RFC2119] [RFC8174] when, and only when, they appear in all
    capitals, as shown here.
 
-2.2.  Terminology
 
-   The reader is assumed to be familiar with the terminology defined in
-   [RFC5440], [RFC7551], [RFC8231], and [RFC8697].
 
 
 
@@ -225,6 +225,11 @@ Gandhi, et al.         Expires September 14, 2020               [Page 4]
 
 Internet-Draft    PCEP for Associated Bidirectional LSP       March 2020
 
+
+2.2.  Terminology
+
+   The reader is assumed to be familiar with the terminology defined in
+   [RFC5440], [RFC7551], [RFC8231], and [RFC8697].
 
 3.  Overview
 
@@ -269,11 +274,6 @@ Internet-Draft    PCEP for Associated Bidirectional LSP       March 2020
    The originating endpoint (PCC) node may report/ delegate the forward
    and reverse direction LSPs to a PCE.  The remote endpoint (PCC) node
    may report its forward direction LSP to a PCE.
-
-
-
-
-
 
 
 
@@ -938,11 +938,11 @@ Internet-Draft    PCEP for Associated Bidirectional LSP       March 2020
               Communications Protocol (PCEP)", draft-ietf-pce-pcep-
               yang-13 (work in progress), October 2019.
 
-   [RFC5654]  Niven-Jenkins, B., Ed., Brungard, D., Ed., Betts, M., Ed.,
-              Sprecher, N., and S. Ueno, "Requirements of an MPLS
-              Transport Profile", RFC 5654, DOI 10.17487/RFC5654,
-              September 2009, <https://www.rfc-editor.org/info/rfc5654>.
-
+   [I-D.ietf-pce-sr-bidir-path]
+              Li, C., Chen, M., Cheng, W., Gandhi, R., and Q. Xiong,
+              "PCEP Extensions for Associated Bidirectional Segment
+              Routing (SR) Paths", draft-ietf-pce-sr-bidir-path-01 (work
+              in progress), February 2020.
 
 
 
@@ -953,6 +953,11 @@ Gandhi, et al.         Expires September 14, 2020              [Page 17]
 
 Internet-Draft    PCEP for Associated Bidirectional LSP       March 2020
 
+
+   [RFC5654]  Niven-Jenkins, B., Ed., Brungard, D., Ed., Betts, M., Ed.,
+              Sprecher, N., and S. Ueno, "Requirements of an MPLS
+              Transport Profile", RFC 5654, DOI 10.17487/RFC5654,
+              September 2009, <https://www.rfc-editor.org/info/rfc5654>.
 
    [RFC7420]  Koushik, A., Stephan, E., Zhao, Q., King, D., and J.
               Hardwick, "Path Computation Element Communication Protocol
@@ -997,11 +1002,6 @@ Authors' Addresses
    Email: rgandhi@cisco.com
 
 
-   Colby Barth
-   Juniper Networks
-
-   Email: cbarth@juniper.net
-
 
 
 
@@ -1010,16 +1010,16 @@ Gandhi, et al.         Expires September 14, 2020              [Page 18]
 Internet-Draft    PCEP for Associated Bidirectional LSP       March 2020
 
 
+   Colby Barth
+   Juniper Networks
+
+   Email: cbarth@juniper.net
+
+
    Bin Wen
    Comcast
 
    Email: Bin_Wen@cable.comcast.com
-
-
-
-
-
-
 
 
 

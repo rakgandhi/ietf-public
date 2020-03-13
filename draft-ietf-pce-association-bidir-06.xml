@@ -16,8 +16,9 @@
 <!ENTITY RFC8051 SYSTEM "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.8051.xml">
 <!ENTITY RFC8253 SYSTEM "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.8253.xml">
 <!ENTITY RFC8408 SYSTEM "https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.8408.xml">
-<!ENTITY I-D.ietf-pce-pcep-yang SYSTEM "https://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.draft-ietf-pce-pcep-yang-13.xml">
+<!ENTITY I-D.ietf-pce-pcep-yang SYSTEM "https://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.ietf-pce-pcep-yang.xml">
 <!ENTITY I-D.ietf-pce-pcep-stateful-pce-gmpls SYSTEM "https://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.ietf-pce-pcep-stateful-pce-gmpls.xml">
+<!ENTITY I-D.ietf-pce-sr-bidir-path SYSTEM "https://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.ietf-pce-sr-bidir-path.xml">
 ]>
 <rfc category="std" docName="draft-ietf-pce-association-bidir-06"
      ipr="trust200902" submissionType="IETF">
@@ -129,9 +130,13 @@
       MPLS-TE LSPs into an Associated Bidirectional LSP for both single-sided
       and double-sided initiation cases when using a Stateful PCE for both
       PCE-Initiated and PCC-Initiated LSPs as well as when using a Stateless
-      PCE. The procedures defined are applicable to the LSPs using Resource
-      Reservation Protocol (RSVP) for signaling <xref target="RFC3209"/>.</t>
-	      
+      PCE. The procedures defined are applicable to the TE LSPs using Resource
+      Reservation Protocol (RSVP) for signaling <xref target="RFC3209"/>.
+      The procedure for associating two unidirectional Segment Routing (SR) Paths 
+      to form an Associated Bidirectional SR Path is defined in 
+      <xref target="I-D.ietf-pce-sr-bidir-path"/>, and is outside the scope of 
+      this document.</t>
+
       <section anchor="sect-1.1" title="Summary of PCEP Extensions"><t>
       The PCEP extensions defined in this document cover the following cases:</t>
 
@@ -818,8 +823,8 @@ Error Type  Description                  Reference
       &RFC8408;
 
       &I-D.ietf-pce-pcep-yang;
-
       &I-D.ietf-pce-pcep-stateful-pce-gmpls;
+      &I-D.ietf-pce-sr-bidir-path;
 
     </references>
 
